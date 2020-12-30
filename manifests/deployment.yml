@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lydiakomolafepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lydiakomolafepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lydiakomolafepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lydiakomolafepipelinesjavascriptdocker 
+          image: destregistry.azurecr.io/lydiakomolafepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
